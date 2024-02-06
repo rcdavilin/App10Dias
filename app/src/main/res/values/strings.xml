@@ -1,3 +1,25 @@
 <resources>
-    <string name="app_name">App10Dias</string>
+    <string name="app_name">Monumentos</string>
+    <string name="Taj_Mahal">Taj-Mahal</string>
+    <string name="MurallaChina">Muralla China</string>
+    <string name="TorreEiffel">Torre Eiffel</string>
+    <string name="NotreDame">Notre Dame</string>
+    <string name="Coliseo">Coliseo Romano</string>
+    <string name="PiramidesEgipto">Piramides de Egipto</string>
+    <string name="OperaSidney">Opera de Sidney</string>
+    <string name="SagradaFamilia">Sagrada Familia</string>
+    <string name="BigBen">Big Ben</string>
+    <string name="StonehengeInglaterra">Stonehenge  Inglaterra</string>
+    <string name="InfoTaj_Mahal">Agra, India</string>
+    <string name="InfoMurallaChina">Jinshanling, China</string>
+    <string name="InfoTorreEiffel">Paris, Francia</string>
+    <string name="InfoNotreDame">Paris, Francia</string>
+    <string name="InfoColiseo">Roma, Italia</string>
+    <string name="InfoPiramidesEgipto">Guiza, Egipto</string>
+    <string name="InfoOperaSidney">Sidney, Australia</string>
+    <string name="InfoSagradaFamilia">Barcelona, España</string>
+    <string name="InfoBigBen">Londres, Reino Unido</string>
+    <string name="InfoStonehengeInglaterra">Salisbury, Reino Unido</string>
+    <string name="informacion">Informacion: </string>
+    <string name="expand_button_content_description">Ve mas informacion de los monumentos.</string>
 </resources>
