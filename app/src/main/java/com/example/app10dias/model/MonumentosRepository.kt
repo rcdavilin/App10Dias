@@ -13,7 +13,7 @@ object MonumentosRepository {
         Monumentos(
             monumentoTitulo = R.string.MurallaChina,
             monumentoInfo = R.string.InfoMurallaChina,
-            imageMonumento = R.drawable.the_great_wall_of_china_at_jinshanling_edit
+            imageMonumento = R.drawable.murallachina
         ),
         Monumentos(
             monumentoTitulo = R.string.TorreEiffel,
