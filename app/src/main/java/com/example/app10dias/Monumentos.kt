@@ -15,9 +15,15 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.KeyboardArrowDown
+import androidx.compose.material.icons.filled.KeyboardArrowUp
+
 import androidx.compose.material3.Card
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -110,7 +116,10 @@ fun MonumentosItem(
             .fillMaxSize()) {
 
             MonumentosName(monumentos.monumentoTitulo)
-
+            MonumentosItemButton(
+                expanded = expanded,
+                onClick = {expanded = !expanded}
+            )
             MonumentosIcon(monumentos.imageMonumento,
                 onClick = { expanded = !expanded}
             )
@@ -190,5 +199,24 @@ fun MonumentosInfo(
             text = stringResource(monumentosHobby),
             style = MaterialTheme.typography.bodyLarge
         )
+    }
+}
+
+@Composable
+private fun MonumentosItemButton(
+    expanded: Boolean,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    IconButton(
+        onClick = onClick,
+        modifier = modifier
+    ) {
+        Icon(
+            imageVector = if (expanded) Icons.Filled.KeyboardArrowDown else Icons.Filled.KeyboardArrowUp,
+            contentDescription = stringResource(R.string.expand_button_content_description),
+            tint = MaterialTheme.colorScheme.secondary
+        )
+
     }
 }
