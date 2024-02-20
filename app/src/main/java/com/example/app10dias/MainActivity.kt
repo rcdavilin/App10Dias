@@ -36,7 +36,9 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun MonumentosPreview() {
     App10DiasTheme(darkTheme = false) {
-        MonumentosApp()
+       MonumentosApp()
+
+
     }
 }
 

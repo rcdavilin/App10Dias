@@ -22,4 +22,16 @@
     <string name="InfoStonehengeInglaterra">Salisbury, Reino Unido</string>
     <string name="informacion">Informacion: </string>
     <string name="expand_button_content_description">Ve mas informacion de los monumentos.</string>
+    <string name="linkTajMahal">https://es.wikipedia.org/wiki/Taj_Mahal</string>
+    <string name="linkMuralla">https://es.wikipedia.org/wiki/Gran_Muralla_China</string>
+    <string name="linkEiffel">https://es.wikipedia.org/wiki/Torre_Eiffel</string>
+    <string name="linkNotreDame">https://es.wikipedia.org/wiki/Catedral_de_Notre_Dame_(Par%C3%ADs)</string>
+    <string name="linkColiseo">https://es.wikipedia.org/wiki/Coliseo</string>
+    <string name="linkPiramides">https://es.wikipedia.org/wiki/Pir%C3%A1mides_de_Egipto</string>
+    <string name="linkOpera">https://es.wikipedia.org/wiki/%C3%93pera_de_S%C3%ADdney</string>
+    <string name="linkSagradaFamilia">https://es.wikipedia.org/wiki/Templo_Expiatorio_de_la_Sagrada_Familia</string>
+    <string name="linkBigBen">https://es.wikipedia.org/wiki/Big_Ben</string>
+    <string name="linkStonehedge">https://es.wikipedia.org/wiki/Stonehenge</string>
+
+
 </resources>
