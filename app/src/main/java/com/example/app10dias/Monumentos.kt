@@ -6,7 +6,6 @@ import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -18,7 +17,6 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
-
 import androidx.compose.material3.Card
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -101,7 +99,12 @@ fun MonumentosItem(
     modifier: Modifier = Modifier
 ) {
     var expanded by remember { mutableStateOf(false) }
-
+    var click by remember {
+        mutableStateOf(false)
+    }
+    var posicion by remember {
+        mutableStateOf(0)
+    }
     Card(
         modifier = modifier
     ) {
@@ -112,7 +115,6 @@ fun MonumentosItem(
                     stiffness = Spring.StiffnessHigh
                 )
             )
-            .background(MaterialTheme.colorScheme.errorContainer)
             .fillMaxSize()) {
 
             MonumentosName(monumentos.monumentoTitulo)
@@ -121,9 +123,33 @@ fun MonumentosItem(
                 onClick = {expanded = !expanded}
             )
             MonumentosIcon(monumentos.imageMonumento,
-                onClick = { expanded = !expanded}
+                onClick = { click = !click}
             )
+            if(click){
+                when(posicion){
+                    0 -> monumentos.imageMonumento
+                    1 -> monumentos.imageMonumento1
+                    2 -> monumentos.imageMonumento2
+                    else -> {
+                        posicion = 0
+                        monumentos.imageMonumento
+                    }
+                }
+                if (posicion == 0) {
+                    posicion = 2
 
+                } else {
+                    posicion--
+
+                }
+                if (posicion == 2) {
+                    posicion = 0
+
+                } else {
+                    posicion++
+
+                }
+            }
 
             if(expanded){
                 MonumentosInfo(monumentosHobby = monumentos.monumentoInfo,
@@ -136,13 +162,14 @@ fun MonumentosItem(
                 )
             }
 
+
         }
     }
 }
 
 @Composable
 fun MonumentosIcon(
-    @DrawableRes monumentoIcon: Int,
+    @DrawableRes monumentos: Int,
     modifier: Modifier = Modifier,
     onClick: () -> Unit
 ) {
@@ -153,7 +180,7 @@ fun MonumentosIcon(
             .clip(MaterialTheme.shapes.small)
             .clickable(onClick = onClick),
         contentScale = ContentScale.Crop,
-        painter = painterResource(monumentoIcon),
+        painter = painterResource(monumentos),
         contentDescription = null
     )
 }
