@@ -9,6 +9,7 @@ data class Monumentos(
     @DrawableRes val imageMonumento: Int,
     @DrawableRes val imageMonumento1: Int,
     @DrawableRes val imageMonumento2: Int,
-    @StringRes val linkWikipedia: Int
+    @StringRes val linkWikipedia: Int,
+    @StringRes val linkYoutube: Int
 
 )

@@ -138,6 +138,7 @@ fun MonumentosItem(
                 MonumentosInfo(
                     monumentosHobby = monumentos.monumentoInfo,
                     linkResId = monumentos.linkWikipedia,
+                    youtube = monumentos.linkYoutube,
                     modifier = Modifier.padding(start = dimensionResource(R.dimen.padding_medium),
                         top = dimensionResource(R.dimen.padding_small),
                         end = dimensionResource(R.dimen.padding_medium),
@@ -216,10 +217,12 @@ fun MonumentosName(
 fun MonumentosInfo(
     @StringRes monumentosHobby: Int,
     @StringRes linkResId: Int,
+    @StringRes youtube:Int,
     modifier: Modifier = Modifier
 ) {
     val localContext = LocalContext.current
     val link = stringResource(id = linkResId)
+    val youtubeLink = stringResource(id = youtube)
     Column(
         modifier = modifier
     ) {
@@ -242,11 +245,34 @@ fun MonumentosInfo(
                 text = "\uD83C\uDF10"
             )
             Text(
-                text = link,
+                text = "Wikipedia",
                 fontSize = 15.sp,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(4.dp),
+                    .padding(dimensionResource(id = R.dimen.padding4dp)),
+                textAlign = TextAlign.Left,
+                color = Color.Black,
+                textDecoration = TextDecoration.Underline
+            )
+
+        }
+        TextButton(onClick = {
+
+            val intento = Intent(Intent.ACTION_VIEW)
+            intento.data = Uri.parse(youtubeLink)
+            ContextCompat.startActivity(localContext, intento, null)
+        }) {
+            Icon(
+                modifier = Modifier
+                    .size(20.dp),
+                painter = painterResource(id = R.drawable.icono_youtube),
+                contentDescription = "youtube")
+            Text(
+                text = "Youtube",
+                fontSize = 15.sp,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(dimensionResource(id = R.dimen.padding4dp)),
                 textAlign = TextAlign.Left,
                 color = Color.Black,
                 textDecoration = TextDecoration.Underline
@@ -255,6 +281,8 @@ fun MonumentosInfo(
         }
     }
 }
+
+
 
 
 @Composable

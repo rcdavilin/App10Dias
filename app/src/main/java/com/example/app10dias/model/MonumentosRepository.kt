@@ -11,7 +11,8 @@ object MonumentosRepository {
             imageMonumento = R.drawable.taj_mahal,
             imageMonumento1 = R.drawable.tajmahal1,
             imageMonumento2 = R.drawable.tajmahal2,
-            linkWikipedia = R.string.linkTajMahal
+            linkWikipedia = R.string.linkTajMahal,
+            linkYoutube = R.string.youtubeTajMahal
         ),
         Monumentos(
             monumentoTitulo = R.string.MurallaChina,
@@ -19,7 +20,8 @@ object MonumentosRepository {
             imageMonumento = R.drawable.muralla,
             imageMonumento1 = R.drawable.muralla1,
             imageMonumento2 = R.drawable.muralla2,
-            linkWikipedia = R.string.linkMuralla
+            linkWikipedia = R.string.linkMuralla,
+            linkYoutube = R.string.youtubeMuralla
 
         ),
         Monumentos(
@@ -28,7 +30,8 @@ object MonumentosRepository {
             imageMonumento = R.drawable.eiffel,
             imageMonumento1 = R.drawable.eiffel1,
             imageMonumento2 = R.drawable.eiffel2,
-            linkWikipedia = R.string.linkEiffel
+            linkWikipedia = R.string.linkEiffel,
+            linkYoutube = R.string.youtubeEiffel
 
         ),
         Monumentos(
@@ -37,7 +40,8 @@ object MonumentosRepository {
             imageMonumento = R.drawable.dame,
             imageMonumento1 = R.drawable.dame1,
             imageMonumento2 = R.drawable.dame2,
-            linkWikipedia = R.string.linkNotreDame
+            linkWikipedia = R.string.linkNotreDame,
+            linkYoutube = R.string.youtubeNotreDame
 
         ),
         Monumentos(
@@ -46,7 +50,8 @@ object MonumentosRepository {
             imageMonumento = R.drawable.coliseo,
             imageMonumento1 = R.drawable.coliseo1,
             imageMonumento2 = R.drawable.coliseo2,
-            linkWikipedia = R.string.Coliseo
+            linkWikipedia = R.string.Coliseo,
+            linkYoutube = R.string.youtubeColiseo
 
         ),
         Monumentos(
@@ -55,7 +60,8 @@ object MonumentosRepository {
             imageMonumento = R.drawable.piramide,
             imageMonumento1 = R.drawable.piramide1,
             imageMonumento2 = R.drawable.piramides2,
-            linkWikipedia = R.string.linkPiramides
+            linkWikipedia = R.string.linkPiramides,
+            linkYoutube = R.string.youtubePiramides
 
         ),
         Monumentos(
@@ -64,7 +70,8 @@ object MonumentosRepository {
             imageMonumento = R.drawable.sidney,
             imageMonumento1 = R.drawable.sidney1 ,
             imageMonumento2 = R.drawable.sidney2,
-            linkWikipedia = R.string.linkOpera
+            linkWikipedia = R.string.linkOpera,
+            linkYoutube = R.string.youtubeOpera
 
         ),
         Monumentos(
@@ -73,7 +80,8 @@ object MonumentosRepository {
             imageMonumento = R.drawable.sagrada,
             imageMonumento1 = R.drawable.sagrada1,
             imageMonumento2 = R.drawable.sagrada2,
-            linkWikipedia = R.string.linkSagradaFamilia
+            linkWikipedia = R.string.linkSagradaFamilia,
+            linkYoutube = R.string.youtubeSagradaFamilia
 
         ),
         Monumentos(
@@ -82,8 +90,8 @@ object MonumentosRepository {
             imageMonumento = R.drawable.ben,
             imageMonumento1 = R.drawable.ben1,
             imageMonumento2 = R.drawable.ben2,
-            linkWikipedia = R.string.linkBigBen
-
+            linkWikipedia = R.string.linkBigBen,
+            linkYoutube = R.string.youtubeBigBen
         ),
         Monumentos(
             monumentoTitulo = R.string.StonehengeInglaterra,
@@ -91,7 +99,8 @@ object MonumentosRepository {
             imageMonumento = R.drawable.stonehedge,
             imageMonumento1 = R.drawable.stonehedge1,
             imageMonumento2 = R.drawable.stonehedge2,
-            linkWikipedia = R.string.linkStonehedge
+            linkWikipedia = R.string.linkStonehedge,
+            linkYoutube = R.string.youtubeStonehedge
 
         )
     )

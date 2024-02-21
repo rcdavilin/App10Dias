@@ -32,6 +32,15 @@
     <string name="linkSagradaFamilia">https://es.wikipedia.org/wiki/Templo_Expiatorio_de_la_Sagrada_Familia</string>
     <string name="linkBigBen">https://es.wikipedia.org/wiki/Big_Ben</string>
     <string name="linkStonehedge">https://es.wikipedia.org/wiki/Stonehenge</string>
-
+    <string name="youtubeTajMahal">https://www.youtube.com/watch?v=Ipzpz5xssLo</string>
+    <string name="youtubeMuralla">https://www.youtube.com/watch?v=do1Go22Wu8o</string>
+    <string name="youtubeEiffel">https://www.youtube.com/watch?v=Y31SKaentVQ</string>
+    <string name="youtubeNotreDame">https://www.youtube.com/watch?v=t731sHALnUA</string>
+    <string name="youtubeColiseo">https://www.youtube.com/watch?v=2r4nLvQjhr8</string>
+    <string name="youtubePiramides">https://www.youtube.com/watch?v=SR9xCPGiamU</string>
+    <string name="youtubeOpera">https://www.youtube.com/watch?v=UU5WpolIEwg</string>
+    <string name="youtubeSagradaFamilia">https://www.youtube.com/watch?v=L4LqQHnHPBY</string>
+    <string name="youtubeBigBen">https://www.youtube.com/watch?v=iwOpCNz3_bI</string>
+    <string name="youtubeStonehedge">https://www.youtube.com/watch?v=uBSGGyuUFmU</string>
 
 </resources>
