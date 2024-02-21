@@ -8,7 +8,6 @@ import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -17,6 +16,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.KeyboardArrowDown
@@ -176,19 +176,18 @@ fun MonumentosIcon(
 private fun ImagenClickable(monumentos : Monumentos){
 
     var posicion by remember { mutableStateOf(0) }
+    val images = listOf(monumentos.imageMonumento, monumentos.imageMonumento1, monumentos.imageMonumento2)
 
-    when(posicion){
-        0 -> MonumentosIcon(monumentos = monumentos.imageMonumento) {
-            posicion = (posicion + 1) % 3
-        }
-        1 -> MonumentosIcon(monumentos = monumentos.imageMonumento1) {
-            posicion = (posicion + 1) % 3
-        }
-        2 -> MonumentosIcon(monumentos = monumentos.imageMonumento2) {
-            posicion = (posicion + 1) % 3
+    LazyRow {
+        items(images.size) { index ->
+            MonumentosIcon(monumentos = images[index]) {
+                posicion = (posicion + 1) % 3
+            }
         }
     }
 }
+
+
 
 @Composable
 fun MonumentosName(
