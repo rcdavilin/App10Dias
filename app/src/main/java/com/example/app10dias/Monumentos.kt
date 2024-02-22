@@ -50,7 +50,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat
 import com.example.app10dias.model.Monumentos
-import com.example.app10dias.model.MonumentosRepository
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -77,14 +76,14 @@ fun MonumentosTopAppBar() {
             }
         },
 
-    )
+        )
 }
 /**
  * Composable that displays an app bar and a list of dogs.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MonumentosApp() {
+fun MonumentosApp(monumentosList: List<Monumentos>) {
     Scaffold(
 
         topBar = {
@@ -93,7 +92,7 @@ fun MonumentosApp() {
         }
     ) { it ->
         LazyColumn(contentPadding = it) {
-            items(MonumentosRepository.monumentos) {
+            items(monumentosList) {
                 MonumentosItem(
                     monumentos = it,
                     modifier = Modifier.padding(dimensionResource(id = R.dimen.padding_small))
@@ -133,7 +132,7 @@ fun MonumentosItem(
                 onClick = {expanded = !expanded}
             )
             ImagenClickable(monumentos = monumentos)
-           
+
 
             if(expanded){
                 MonumentosInfo(

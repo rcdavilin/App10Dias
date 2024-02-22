@@ -9,6 +9,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.app10dias.model.MonumentosRepository
 import com.example.app10dias.ui.theme.App10DiasTheme
 
 class MainActivity : ComponentActivity() {
@@ -21,7 +22,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    MonumentosApp()
+                    MonumentosApp(monumentosList = MonumentosRepository().Monumentos())
                 }
             }
         }
@@ -36,7 +37,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun MonumentosPreview() {
     App10DiasTheme(darkTheme = false) {
-       MonumentosApp()
+       MonumentosApp(monumentosList = MonumentosRepository().Monumentos())
 
 
     }
@@ -46,6 +47,6 @@ fun MonumentosPreview() {
 @Composable
 fun MonumentosDarkThemePreview() {
     App10DiasTheme(darkTheme = true) {
-        MonumentosApp()
+        MonumentosApp(monumentosList = MonumentosRepository().Monumentos())
     }
 }
